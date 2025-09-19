@@ -1,0 +1,31 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Ejecutar Cypress
+      - name: Run Cypress tests
+        run: npx cypress run --spec "cypress/e2e/Cotzia/FlujoInsumo.cy.js"
+
