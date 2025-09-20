@@ -10,7 +10,8 @@
 - Jira | Git | GitHub  
 
 ## 🌱 Actualmente aprendiendo
-- Automatización de pruebas E2E con Cypress  
+- Automatización de pruebas E2E con Cypress
+- Playwright  
 - Buenas prácticas en QA y accesibilidad  
 
 ## 📫 Cómo contactarme
